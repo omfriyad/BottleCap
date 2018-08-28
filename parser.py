@@ -52,7 +52,6 @@ class Parser():
             return Assign(p[1], p[3])
 
         # defining expressions
-        @self.pg.production('expression : variable_name')
         @self.pg.production('variable_name : IDENTIFIER')
         def identifier(p):
             return Identifier(p[0].value)
